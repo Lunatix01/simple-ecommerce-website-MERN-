@@ -5,11 +5,22 @@ module.exports = {
     extend: {
       fontFamily: {
         roboto:'roboto'
+      },
+      inset: {
+        '-111': '-9%'
+      },
+      backgroundImage: theme => ({
+        'mountains': 'url("./img/Flat-Mountains.svg")'
+      }),
+      height: {
+        'nobar': '99vh'
       }
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    
+  ],
 }
