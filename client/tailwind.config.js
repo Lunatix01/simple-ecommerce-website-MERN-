@@ -1,16 +1,17 @@
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  mode: 'jit',
+  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       fontFamily: {
-        roboto:'roboto'
+        roboto: 'roboto'
       },
       inset: {
         '-111': '-9%'
       },
       backgroundImage: theme => ({
-        'mountains': 'url("./img/Flat-Mountains.svg")'
+        'mountains': 'url("../img/Flat-Mountains.svg")'
       }),
       height: {
         'nobar': '99vh'
@@ -18,9 +19,11 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    scrollbar: ['rounded'],
+    extend: {
+    },
   },
   plugins: [
-    
+    require('tailwind-scrollbar')
   ],
 }
