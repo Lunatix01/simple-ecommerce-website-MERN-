@@ -18,8 +18,9 @@
     "express": "^4.17.1",
     "joi": "^17.4.0",
     "jsonwebtoken": "^8.5.1",
-    "localStorage": "^1.0.4",
     "localstorage": "^1.0.1",
-    "mongoose": "^5.13.2"
+    "localStorage": "^1.0.4",
+    "mongoose": "^5.13.2",
+    "next": "^11.0.1"
   }
 }

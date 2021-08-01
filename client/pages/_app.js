@@ -4,13 +4,10 @@ import '../styles/globals.css'
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <div className={Component.name === "Home" ? "bg-mountains bg-fixed bg-contain h-screen scrollbar" : "h-screen"}>
-        <div className="">
-        <Layout className="">
-          {console.log(Component.name)}
-      <Component {...pageProps} />
-    </Layout>
-        </div>
+      <div className={Component.name === "Home" || "Error" ? "bg-cover bg-mountains md:bg-fixed lg:bg-contain h-screen scrollbar" : "h-screen"}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </div>
     </>
   )

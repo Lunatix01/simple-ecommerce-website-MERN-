@@ -34,9 +34,9 @@ const Navbar = () => {
             </div>
             {isOpen ? 
             <div>
-                <div className="mx-8 mt-4">
+                <div className="mx-2 md:mx-8 mt-1">
                     
-                        <Link to="/">
+                        <Link href="/">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                 <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
                             </svg>
@@ -47,7 +47,7 @@ const Navbar = () => {
                 <ul>
                         {links.map((link) => {
                             return (
-                                <li className="mx-8 mt-4 transition ease-in-out text-gray-400 hover:text-gray-700"><Link href={link.url}><a>{link.name}</a></Link></li>
+                                <li className="mx-2 mt-1 md:mx-8 md:mt-2 transition ease-in-out text-gray-400 hover:text-gray-700"><Link href={link.url}><a>{link.name}</a></Link></li>
                             )
                         })}
                     
