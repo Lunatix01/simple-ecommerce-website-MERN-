@@ -22,7 +22,7 @@ export default function Home() {
         </span>
       </div>
       <button className="absolute left-2/4 transform -translate-x-2/4 mb-10 text-2xl text-white">
-        <Link href="/register" className=""><a className="relative text-bold transition ease-in-out rounded-md  bg-indigo-600 py-1 px-4 md:py-3 md:px-7 hover:bg-indigo-400">Get Started<span className="absolute -right-1 -top-111 w-3 h-3 rounded-lg bg-white animate-ping"></span></a></Link>
+        <Link href="/register" className=""><a className="relative text-bold btn">Get Started<span className="absolute -right-1 -top-111 w-3 h-3 rounded-lg bg-white animate-ping"></span></a></Link>
       </button>
     </div>
   )

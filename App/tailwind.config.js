@@ -11,7 +11,7 @@ module.exports = {
         '-111': '-9%'
       },
       backgroundImage: theme => ({
-        'mountains': 'url("../img/Flat-Mountains.svg")'
+        'mountains': 'url("../public/Flat-Mountains.svg")'
       }),
       height: {
         'nobar': '99vh'

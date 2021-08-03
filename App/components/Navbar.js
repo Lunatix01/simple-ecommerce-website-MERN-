@@ -5,7 +5,7 @@ import {useState} from 'react'
 import Link from 'next/link'
 
 const Navbar = () => {
-    const [isOpen,setIsOpen] = useState(false)
+    const [ isOpen , setIsOpen ] = useState(false)
     return (
             <div className="block w-1000 text-md md:flex items-center justify-between font-roboto md:text-2xl font-semibold">
             <motion.div className="hidden md:flex" whileHover={{ scale: 0 }} whileHover={{ rotate: 180, scale: 1 }} transition={{type: "spring", stiffness: 260,damping: 2}}>

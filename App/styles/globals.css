@@ -6,3 +6,6 @@
 .centered{
   @apply flex justify-center;
 }
+.btn {
+  @apply transition ease-in-out rounded-md  bg-indigo-600 py-1 px-4 md:py-3 md:px-7 hover:bg-indigo-400;
+}
