@@ -24,7 +24,7 @@ router.post('/register',async(req,res)=> {
 
     //check if email or username exists
     const isExist = await registerChecker(value.username,value.email)
-    if(isExist) return res.status(400).json({message: "email or username already exists"})
+    if(isExist) return res.status(205).json({message: "email or username already exists"})
     // saving to database
     const user = new User({
         username: value.username,
@@ -45,14 +45,19 @@ router.post('/register',async(req,res)=> {
 })
 
 router.post('/login', async(req,res) =>{
+    // searchin in the database
     const email = await User.findOne({
         email:req.body.email,
     })
-    if(!email) return res.status(400).json({message:"email or password is wrong"})  
+    // if email doesnt exist
+    if(!email) return res.status(205).json({message:"email or password is wrong"})  
+    // check if password matches
     const match = await compareHashes(req.body.password,email.password)
-    console.log(match)
-    if(!match) return res.status(400).json({message:"email or password is wrong"})
+    // response
+    if(!match) return res.status(205).json({message:"email or password is wrong"})
+    // signing JWT 
     const token = jwt.sign({username: email.username,id:email.id},process.env.TOKEN,{ expiresIn: '30mins' })
+    // response with JWT 
     res.json({message:"logged in",token:token})
 })
 

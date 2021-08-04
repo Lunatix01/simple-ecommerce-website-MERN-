@@ -5,7 +5,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
     {console.log(Component.name)}
-      <div className={Component.name === "Home" || Component.name === "Custom404" ? "bg-cover bg-mountains md:bg-fixed lg:bg-contain h-screen scrollbar" : "h-screen"}>
+      <div className={Component.name === "Home" || Component.name === "Custom404" || Component.name === "Register" || Component.name === "login" ? "bg-cover bg-mountains md:bg-fixed lg:bg-contain h-screen scrollbar" : "h-screen"}>
         <Layout>
           <Component {...pageProps} /> 
         </Layout>  

@@ -5,7 +5,10 @@ const mongoose = require('mongoose')
 const next = require('next')
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
+
+//handler
 const handle = app.getRequestHandler()
+// PORT
 const PORT = 8000;
 
 app.prepare().then(() =>{
@@ -34,7 +37,6 @@ app.prepare().then(() =>{
 
 
     // server listener
-
     server.listen(PORT,()=>{
         console.log('connected to the web server on port 8000')
     })
