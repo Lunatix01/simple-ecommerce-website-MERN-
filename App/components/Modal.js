@@ -7,7 +7,7 @@ const Modal = ({ setIsShowModal, modalContent}) => {
         },3000)
     })
     return (
-        <div className="transition-all ease-in-out delay-75">
+        <div className="transition-all ease-in-out delay-75 centered">
             <h2 className="text-indigo-500">
                 {modalContent}
             </h2>

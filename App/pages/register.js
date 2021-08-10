@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useState } from 'react'
 import Modal from '../components/Modal'
+import { setItem } from '../components/localStorage'
 const Register = () => {
     const [ username, setUsername ] = useState('')
     const [ email , setEmail ] = useState('')
