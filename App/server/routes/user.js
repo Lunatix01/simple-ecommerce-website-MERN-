@@ -7,12 +7,12 @@ const {registerVal} = require('../controllers/validation')
 const {registerChecker} = require('../controllers/isExist')
 
 // import middleware
-const {verify} = require('../middlewares/jwt')
+const { verify } = require('../middlewares/jwt')
 //import models
 const User = require('../model/User')
 
-
-router.post('/register',async(req,res)=> {
+// Register a User
+router.post('/register', async(req,res)=> {
     // validate datas
     const {error,value} = registerVal(req.body)
 
@@ -44,6 +44,7 @@ router.post('/register',async(req,res)=> {
     
 })
 
+// login to an existing account 
 router.post('/login', async(req,res) =>{
     // searchin in the database
     const email = await User.findOne({
@@ -56,10 +57,14 @@ router.post('/login', async(req,res) =>{
     // response
     if(!match) return res.status(205).json({message:"email or password is wrong"})
     // signing JWT 
-    const token = jwt.sign({username: email.username,id:email.id},process.env.TOKEN,{ expiresIn: '30mins' })
+    const token = jwt.sign( { username: email.username,id:email.id } ,process.env.TOKEN ,{ expiresIn: '30mins' })
     // response with JWT 
-    res.json({message:"logged in",token:token})
+    res.status(201).json( { message:" logged in ", token : token } )
 })
 
+//
+router.post('/checkjwt', verify , ( req , res ) => {
+    res.status(201).json( { message: "token is valid" } )
+})
 
 module.exports = router
