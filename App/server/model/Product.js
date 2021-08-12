@@ -22,7 +22,7 @@ const productSchema = new mongoose.Schema({
     image :{
         type: String,
         required: true,
-        default:"user.png"
+        default:"../public/product_default.jpg"
     }, 
     tags: {
         type : [], 
