@@ -1,4 +1,5 @@
 const getItem = ( key ) => {
+    console.log(key)
     const ls = window.localStorage
     try {
         return ls.getItem(key)

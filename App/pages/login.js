@@ -12,7 +12,6 @@ const login = () => {
             password
         }
         const sendData = await axios.post('http://localhost:8000/api/auth/login', query )
-        console.log(sendData)
         if (sendData.status === 205) {
             setModalContent("Email or Username is wrong")
         }
@@ -45,7 +44,7 @@ const login = () => {
                 { isShowModal && <Modal modalContent={modalContent} setIsShowModal={setIsShowModal} />}
             </div>
             <div className="hidden">
-                {isRedirect && setTimeout(() => { router.push('/products') }, 5000)}
+                {isRedirect && setTimeout(() => { router.push('/profile') }, 5000)}
             </div>
             
             

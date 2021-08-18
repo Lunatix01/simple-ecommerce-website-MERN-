@@ -14,15 +14,15 @@ export async function getStaticProps() {
 }
 
 const products = ({data}) => {
-    console.log(data)
     return (
         <>
         <div className="">
             <div>
                 <div className="centered my-12">
-                    <h1 className="text-5xl font-semibold ">
+                    <h1 className="text-5xl font-bold ">
                         Products
                     </h1>
+                    
                 </div>
                 
                 <div className="centered">
@@ -30,14 +30,17 @@ const products = ({data}) => {
                         {
                             data.map((product) => {
                                 return (
-                                    <div className="bg-white w-80 h-96 rounded overflow-hidden shadow-lg hover:bg-gray-50">
-                                        <Image src={image} alt="default" className="w-full"/>
+                                    <div className="bg-white w-80 h-96 cursor-pointer rounded overflow-hidden shadow-lg hover:transform hover:scale-105 hover:transition hover:ease-in  hover:ring-2 ring-indigo-600">
+                                        <Image src={image} alt="default" className="w-full "/>
                                         <div className="p-5">
                                             <h2 className="font-semibold">
                                                 {
                                                     product.title
                                                 }
                                             </h2>
+                                        </div>
+                                        <div>
+                                            
                                         </div>
                                         
                                     </div>
