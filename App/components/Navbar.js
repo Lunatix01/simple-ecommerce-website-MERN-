@@ -1,7 +1,7 @@
 import { FaConnectdevelop } from "react-icons/fa";
 import { motion } from "framer-motion"
 import links from "../objects/links"
-import {useState} from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 
 const Navbar = () => {
